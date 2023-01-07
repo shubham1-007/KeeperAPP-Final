@@ -10,7 +10,8 @@ function App() {
 
 // this is for db
 useEffect(()=>{
-  fetch('http://keeperfinal-shubham-007.vercel.app/api')
+  // fetch('http://keeperfinal-shubham-007.vercel.app/api')
+  fetch('https://keeperfinal007.vercel.app/api')
   .then((res)=>res.json()
   )
   .then((data)=>{
