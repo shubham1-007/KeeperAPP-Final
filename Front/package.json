@@ -27,5 +27,5 @@
     "not ie <= 11",
     "not op_mini all"
   ],
-  "proxy": "http://keeperfinal-shubham-007.vercel.app/api"
+  "proxy": "http://localhost:7000/api"
 }
