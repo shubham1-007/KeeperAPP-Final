@@ -27,7 +27,7 @@ const DefNote=new Note({
 })
 // DefNote.save();
 
-app.get("https://keeperfinal007.vercel.app/api",function(req,res){
+app.get("/api",function(req,res){
   
    Note.find(function(err,foundItems){
 
