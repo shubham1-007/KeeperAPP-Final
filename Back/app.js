@@ -31,7 +31,7 @@ app.get("/api",function(req,res){
   
    Note.find(function(err,foundItems){
 
-    console.log(foundItems)
+    // console.log(foundItems)
     //    foundItems.map(item=>{
        
     //  console.log(item.name)

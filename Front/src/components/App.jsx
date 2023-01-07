@@ -39,7 +39,8 @@ useEffect(()=>{
   return (
     <div>
       <Header />
-      <CreateArea onAdd={addNote} />
+      {/* <CreateArea onAdd={addNote} /> */}
+      <CreateArea></CreateArea>
       {notes.map((noteItem, index) => {
         return (
           <Note
