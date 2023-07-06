@@ -45,10 +45,18 @@ footer p {
   margin: 16px;
   float: left;
 }
+
+@media (min-width: 768px) {
+  .note {
+    width: 480px;
+  }
+}
+
 .note h1 {
   font-size: 1.1em;
   margin-bottom: 6px;
 }
+
 .note p {
   font-size: 1.1em;
   margin-bottom: 10px;
@@ -68,6 +76,14 @@ footer p {
   outline: none;
 }
 
+@media (max-width: 768px) {
+  .note {
+    display: flex;
+    flex-direction: column;
+    max-width: 320px;
+  }
+}
+
 form.create-note {
   position: relative;
   width: 480px;
@@ -77,6 +93,7 @@ form.create-note {
   border-radius: 7px;
   box-shadow: 0 1px 5px rgb(138, 137, 137);
 }
+
 form.create-note input,
 form.create-note textarea {
   width: 100%;
@@ -87,6 +104,7 @@ form.create-note textarea {
   font-family: inherit;
   resize: none;
 }
+
 form.create-note button {
   position: absolute;
   right: 18px;
