@@ -14,8 +14,11 @@ const corsOptions ={
    credentials:true,            //access-control-allow-credentials:true
    optionSuccessStatus:200,
 }
-app.use(cors(corsOptions)) // Use this after the variable declaration
+app.use(cors(corsOptions)) 
+
+//database connectivity-------------------------------------------------------------------------------------------------------------
 mongoose.connect('mongodb+srv://AfterReact:AfterReact@cluster0.dllf1mj.mongodb.net/?retryWrites=true&w=majority');
+
 const NoteSchema=mongoose.Schema({
     title:String,
     content:String
@@ -26,6 +29,7 @@ const DefNote=new Note({
     content:"This is the content"
 })
 // DefNote.save();
+//====================================================================================================================================
 
 app.get("/api",function(req,res){
   
@@ -34,26 +38,29 @@ app.get("/api",function(req,res){
     // console.log(foundItems)
     //    foundItems.map(item=>{
        
-    //  console.log(item.name)
+    //  console.log(foundItems);
      
      
     // });
-
+    
     // res.render("index",{newItems:foundItems})
     res.send(foundItems)
     })
 });
    
-// app.post("/api",function(req,res){
-//     console.log("req rec");
-//     // res.send("request received"+req.body.Item)
-//     const newNote=new Note({
-//         title:req.body.title,
-//         content:req.body.content
-//     })
-//     newNote.save();
-//     res.redirect("/api")
-// })
+app.post("/api",function(req,res){
+    console.log("req rec");
+    // res.send("request received"+req.body.Item)
+    const newNote=new Note({
+        title:req.body.title,
+        content:req.body.content
+    })
+    newNote.save();
+    res.redirect("/api")
+})
+app.delete("/api:noteTitle",function(req,res){
+  console.log(req.params.noteTitle);
+})
 
 app.get('*',(req,res)=>{
     res.sendFile(path.resolve(__dirname,"../Front/build",'index.html'))
@@ -61,7 +68,7 @@ app.get('*',(req,res)=>{
 
 
    
-const port= process.env.port || 7000
+const port=  7000
 app.listen(port,function(){
 
     console.log("server is running and up my darling 💕 the port"+port);
