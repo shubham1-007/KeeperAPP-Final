@@ -10,11 +10,12 @@ function App() {
 
 // this is for db
 useEffect(()=>{
-  fetch('http://localhost:7000/api')
+  fetch('https://keeperapp-shubham1-007.vercel.app/api')
   .then((res)=>res.json()
   )
   .then((data)=>{
-    setNotes(data)
+  
+    console.log("data")
  
 },[])});
 //ednd of db

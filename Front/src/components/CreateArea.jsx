@@ -20,7 +20,7 @@ function CreateArea(props) {
       };
     });
 
-    fetch('http://localhost:4000/api' , {
+    fetch('http://localhost:7000/api' , {
       method : 'POST',
   
       body : JSON.stringify(name),
@@ -29,18 +29,7 @@ function CreateArea(props) {
           'Content-type' : 'application/json'
       }
   });
-
-
-
-
-
-    
   }
-
-
-
-
-  
 
   function submitNote(event) {
     props.onAdd(note);
