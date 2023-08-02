@@ -19,7 +19,7 @@ useEffect(()=>{
     console.log(data);
     setNotes(data);
 
-    setNotes(data);
+    // setNotes(data);
     // console.log("data")
  
 },[])});
