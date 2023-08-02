@@ -15,8 +15,8 @@ useEffect(()=>{
   )
   .then((data)=>{
 
-    // setNotes(data);
-    console.log("data")
+    setNotes(data);
+    // console.log("data")
  
 },[])});
 //ednd of db
