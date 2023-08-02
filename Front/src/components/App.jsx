@@ -15,7 +15,7 @@ useEffect(()=>{
   )
   .then((data)=>{
 
-    setNotes(data);
+    // setNotes(data);
     console.log("data")
  
 },[])});
