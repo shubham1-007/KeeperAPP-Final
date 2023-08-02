@@ -20,7 +20,7 @@ function CreateArea(props) {
       };
     });
 
-    fetch('http://localhost:7000/api' , {
+    fetch('https://keeperfinal007.vercel.app/api' , {
       method : 'POST',
   
       body : JSON.stringify(name),
