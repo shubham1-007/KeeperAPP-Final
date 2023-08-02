@@ -9,15 +9,17 @@ function App() {
   const [notes, setNotes] = useState([]);
 
 // this is for db
-// useEffect(()=>{
-//   fetch('https://keeperfinal007.vercel.app/api')
-//   .then((res)=>res.json()
-//   )
-//   .then((data)=>{
+
+useEffect(()=>{
+  fetch('https://keeperfinal007.vercel.app/api')
+  .then((res)=>res.json()
+  )
+  .then((data)=>{
   
-//     console.log("data")
+    console.log(data);
+    setNotes(data);
  
-// },[])});
+},[])});
 //ednd of db
 
 
